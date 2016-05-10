@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Poker Quotes</title>
+  <!-- my stylesheet comes after Bootstrap css so I can override some of it  -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Javascript library adds needed browser vendor prefixes  -->
+  <!-- to automatically fix compatibility issues in older browsers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="randomQuote(this)">
+  <div class="main container">
+    <div class="row">
+      <h1>Random Poker Quotes</h1>
+    </div>
+    <div class="row">
+      <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></span>
+      <a href="#" class="button col-xs-2 col-sm-2 col-md-2 col-lg-2" onclick="randomQuote(textAreaRef)">
+        <img src="images/chip_button_trans.png" alt="next quote button">
+        <img src="images/chip_button_trans_blue.png" alt="next quote button">
+      </a>
+      <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></span>
+    </div>
+    <div class="row">
+      <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+      <textarea id = "quoteBox" class="col-xs-6 col-sm-6 col-md-6 col-lg-6" readonly onkeyup="randomQuote(this)"></textarea>
+      <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+    </div>
+    <div class="row">
+      <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></span>
+      <textarea class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="authorBox" readonly></textarea>
+      <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></span>
+    </div>
+    <div id="image_row" class="row">
+      <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></span>
+      <img id="stack_chips" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="images/poker_BG_crop.jpg" alt="image of chips">
+      <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></span>
+    </div>
+  </div>
+<!-- my javascript file comes after Bootstrap and JQuery js so I can override some of it -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
